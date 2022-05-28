@@ -20,6 +20,8 @@ import com.vincentcodes.simulator.util.VoidFunction;
  * This CPU reads word by word. Instructions are
  * typically a one-word instruction. Some 
  * instructions can be a two-word instruction.
+ * 
+ * @author Vincent Ko
  */
 public class CentralProcessor implements CpuComponent{
     public enum ComponentName{
