@@ -75,12 +75,10 @@ public class Parser {
                 instruction.opVariant = resolveJcc(op.value);
                 return instruction;
             }
-            // hlt
-            case 9: return new Instruction(opCode);
             // push, pop, call
-            case 10: return fillInstruction(new Instruction(opCode), 1);
-            // ret
-            case 13: return new Instruction(opCode);
+            case 10: case 11: case 12: return fillInstruction(new Instruction(opCode), 1);
+            // hlt, ret
+            case 9: case 13: return new Instruction(opCode);
             default: throw new RuntimeException("Invalid op code value: '" + op.value + "'");
         }
     }

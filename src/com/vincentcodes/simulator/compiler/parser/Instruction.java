@@ -91,11 +91,6 @@ public class Instruction {
                     baos.writeBytes(intToBytes(labelAddress.get(((LabelOperand)instruction.operands[0]).label)));
                     return baos.toByteArray();
                 }
-                // hlt
-                case 9: {
-                    baos.writeBytes(instructionBytes);
-                    return baos.toByteArray();
-                }
                 // push
                 case 10: {
                     instructionBytes[1] = (byte)((RegisterOperand)instruction.operands[0]).registerNum;
@@ -115,8 +110,8 @@ public class Instruction {
                     baos.writeBytes(intToBytes(labelAddress.get(((LabelOperand)instruction.operands[0]).label)));
                     return baos.toByteArray();
                 }
-                // ret
-                case 13: {
+                // hlt, ret
+                case 9: case 13: {
                     baos.writeBytes(instructionBytes);
                     return baos.toByteArray();
                 }
