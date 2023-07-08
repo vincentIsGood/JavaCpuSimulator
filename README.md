@@ -3,6 +3,12 @@ I tried to create a Simplified CPU simulator myself after having a computer orga
 
 Hopefully I explained each instruction well.
 
+## Running
+This is a library. To learn how you can compile and run the assembly code for this CPU simulator, please
+refer to: 
+- `src/com/vincentcodes/tests/simulator/Compiler_Test.java`
+- `src/com/vincentcodes/tests/simulator/ApplicationTest.java`
+
 ## Instruction Set
 The instruction set which this CPU can read is small, but the basics are shown as follows:
 
