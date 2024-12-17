@@ -60,6 +60,7 @@ public class Compiler_Test {
 
     @Test
     public void compile_main_and_subroutine(){
+        // technique: Use push and pop together to restore old values
         assertEquals("""
 01040404
 0600ff01

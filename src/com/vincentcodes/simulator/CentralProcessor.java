@@ -1,6 +1,6 @@
 package com.vincentcodes.simulator;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import com.vincentcodes.simulator.ArithmeticLogicUnit.Operation;
@@ -52,7 +52,8 @@ public class CentralProcessor implements CpuComponent{
     private boolean halt = false;
 
     public CentralProcessor(){
-        COMPONENTS = new HashMap<>();
+        // COMPONENTS = new HashMap<>();
+        COMPONENTS = new EnumMap<>(ComponentName.class);
 
         COMPONENTS.put(ComponentName.GENERAL_REGISTERS, generalRegisters = new RegisterFileImpl(16));
         COMPONENTS.put(ComponentName.MEMORY, memory = new MemoryImpl(1024));
